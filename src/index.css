@@ -7,7 +7,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.input {
+  width: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .input {
+    width: 95%;
+    margin-top: 2;
+    margin-left: 3;
+    margin-right: 2;
+  }
+}
+#mapid {
+  height: 600px;
+  width: 500px;
+}
+@media only screen and (min-width: 800px) {
+  .content {
+    display: flex;
+    align-items: center;
+    margin-left: 35%;
+  }
+  .input {
+    margin-left: 35%;
+  }
 }
