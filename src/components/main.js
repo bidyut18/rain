@@ -1,8 +1,13 @@
-import React, { Component } from "react";
-class Main extends Component {
-  render() {
-    return <h1>Hello </h1>;
-  }
+import React from "react";
+import Navbar from "./navbar";
+
+function Main(props) {
+  return (
+    <div>
+      <Navbar />
+      <div></div>
+    </div>
+  );
 }
 
 export default Main;
