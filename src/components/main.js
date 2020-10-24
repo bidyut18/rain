@@ -1,11 +1,14 @@
 import React from "react";
+import Basic from "./basic";
 import Navbar from "./navbar";
-
-function Main(props) {
+//The main file to convey
+function Main() {
   return (
     <div>
       <Navbar />
-      <div></div>
+      <div className="container-fluid align-items-center pt-2 pl-2">
+        <Basic />
+      </div>
     </div>
   );
 }
