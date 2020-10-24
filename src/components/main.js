@@ -19,8 +19,6 @@ class Main extends Component {
     pressure: "",
     humidity: "",
     visibility: "",
-    sunrise: "",
-    sunset: "",
     wind_speed: "",
     image: "",
   };
@@ -47,8 +45,6 @@ class Main extends Component {
       const pressure = Math.round(data.main.pressure); // pressure
       const humidity = Math.round(data.main.humidity); // Humidity
       const visibility = Math.round(data.visibility / 1000); // Visibility
-      const sunrise = data.sys.sunrise; // Sunrise
-      const sunset = data.sys.sunset; // Sunset
       const wind_speed = data.wind.speed; // Wind speed
       //Setting state
       this.setState({ base });
@@ -65,17 +61,6 @@ class Main extends Component {
       this.setState({ humidity });
       this.setState({ visibility });
       this.setState({ wind_speed });
-      function time(timestamp) {
-        return new Intl.DateTimeFormat("en-US", {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-        }).format(timestamp);
-      }
-      let kai = [sunrise, sunset];
-      const star = kai.map(time);
-      this.setState({ sunrise: star[0] });
-      this.setState({ sunset: star[1] });
 
       if (this.state.status === "Clouds") {
         this.setState({ image: require("./assets/rain.jpg") });
@@ -135,8 +120,6 @@ class Main extends Component {
               temp_min={this.state.temp_min}
               pressure={this.state.pressure}
               humidity={this.state.humidity}
-              sunrise={this.state.sunrise}
-              sunset={this.state.sunrise}
               visibility={this.state.visibility}
               wind_speed={this.state.wind_speed}
             />

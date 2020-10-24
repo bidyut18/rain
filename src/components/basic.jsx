@@ -33,7 +33,6 @@ const Basic = (props) => {
             <br />
             Pressure: {props.pressure} mbar <br />
             Humidity: {props.humidity}% <br />
-            Sunrise: {props.sunrise} <br /> Sunset: {props.sunset} <br />
             Visibility: {props.visibility} K.m <br />
             Wind Speed : {props.wind_speed} km/h
           </p>
