@@ -29,7 +29,7 @@ const Basic = (props) => {
             Coordinate: {props.lat} latitude and {props.long} longitude <br />
             Temperature: {props.temp} &deg;C and Feels like {props.feels_like}{" "}
             &deg;C <br />
-            Temperature max: {props.temp_max} deg and min: {props.temp_min} deg{" "}
+            Temperature max: {props.temp_max} &deg;C and min: {props.temp_min}  &deg;C{" "}
             <br />
             Pressure: {props.pressure} mbar <br />
             Humidity: {props.humidity}% <br />
